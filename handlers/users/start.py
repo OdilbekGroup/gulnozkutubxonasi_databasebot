@@ -2,7 +2,14 @@ from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from sqlite3 import Connection
 from loader import dp
-from .btns import mainKB
+
+
+def createReplyKeyboardMurkup(lst, width):
+    KB = types.ReplyKeyboardMarkup(row_width=width, resize_keyboard=True)
+    KB.add(lst)
+    return KB
+
+mainKB = createReplyKeyboardMurkup(["Taqdimotlar", "Videodarslar", "Dars ishlanmalar", "Ko'rgazmalar", "Dasturlar", "Dastur kodlari"], 2)
 
 async def dataBase(f):
     conn = Connection("data.db")
