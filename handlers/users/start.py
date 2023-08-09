@@ -2,7 +2,7 @@ from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from sqlite3 import Connection
 from loader import dp
-from btns import mainKB
+from .btns import mainKB
 
 async def dataBase(f):
     conn = Connection("data.db")

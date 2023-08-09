@@ -1,5 +1,5 @@
 from aiogram import types
-from btns import mainKB, createReplyKeyboardMurkup
+from .btns import mainKB, createReplyKeyboardMurkup
 from loader import dp
 from sqlite3 import Connection
 
